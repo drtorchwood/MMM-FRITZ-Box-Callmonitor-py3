@@ -35,7 +35,6 @@ class FritzAccess(object):
             f = urlopen(url)
             content = f.read().decode('utf-8')
             f.close()
-            print(content)
             # replace newline with space keep clear where the file ends
             content = content.replace("\n", " ")
             send_file(filename, content)
